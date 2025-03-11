@@ -16,6 +16,7 @@ function TopCatigory() {
       .get("https://gw.texnomart.uz/api/web/v1/header/top-categories")
       .then((res) => {
         setCatigory(res.data.data.data);
+        
       });
   }, []);
   return (
