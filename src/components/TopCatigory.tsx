@@ -1,11 +1,13 @@
 import axios from "axios";
 import { log } from "console";
+import Link from "next/link";
 import { type } from "os";
 import React, { useEffect, useState } from "react";
 
 function TopCatigory() {
   type Catigory = {
     title: string;
+    slug:string  
   };
   const [catigory, setCatigory] = useState<Catigory[]>([]);
 
@@ -19,7 +21,7 @@ function TopCatigory() {
   return (
     <div className="flex items-center my-4 justify-between px-10">
       {catigory.map((item, id) => (
-        <p key={id}>{item.title}</p>
+        <Link href={`/catigoria/${item.slug}`} key={id}>{item.title}</Link>
       ))}
     </div>
   );

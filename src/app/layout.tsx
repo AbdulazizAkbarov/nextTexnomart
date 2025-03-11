@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,50 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className=" ">
+          <div className="bg-[gray] flex items-center justify-between px-6 ">
+            <Link href={"/"}>
+              <img
+                className="h-7"
+                src={
+                  "https://texnomart.uz/_nuxt/img/texnomart-logo.3b2791c.svg"
+                }
+                alt=""
+              />
+            </Link>
+            <div className=" flex gap-3 py-3">
+              <div className="flex gap-1">
+                <img
+                  src={
+                    "https://texnomart.uz/_nuxt/img/header-location.c6b9bf0.svg"
+                  }
+                  alt=""
+                />
+                <p>Tashkent</p>
+              </div>
+              <p>Bizning dokonimiz</p>
+              <p>Yuridik shaxslar uchun</p>
+              <p>To'lov usullari</p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <p className="flex items-center  gap-2">
+                Aloqa markazi :
+                <span className="font-bold text-lg">+998 93 823 11 77</span>
+              </p>
+              <select
+                name=""
+                id=""
+                className="border-1 border-gray-400 rounded outline-none"
+              >
+                <option value="">UZ</option>
+                <option value="">RU</option>
+                <option value="">ENG</option>
+              </select>
+            </div>
+          </div>
+        </nav>
+
         {children}
       </body>
     </html>

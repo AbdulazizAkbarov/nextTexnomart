@@ -37,7 +37,7 @@ function XitSavdo() {
           return (
             <Link href={`/about/${item.id}`} key={id} className="border-1 border-gray-500 rounded inline-block p-1 w-[210px] h-[400px]">
               <img
-                className="w-[200px] h-[220px] rounded"
+                className="w-[200px] h-[180px] rounded"
                 src={item.image}
                 alt=""
               />

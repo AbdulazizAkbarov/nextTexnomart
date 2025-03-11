@@ -1,12 +1,12 @@
 "use client";
 
-import Products from "@/app/Components/Products";
-import TopCatigory from "@/app/Components/TopCatigory";
-import XitSavdo from "@/app/Components/XitSavdo";
+import Products from "@/components/Products";
+import TopCatigory from "@/components/TopCatigory";
+import XitSavdo from "@/components/XitSavdo";
 import axios from "axios";
 import { type } from "os";
 import { useEffect, useState } from "react";
-import Corusel from "./Components/Corusel";
+import Corusel from "../components/Corusel";
 export type ProductType = {
   axiom_monthly_price: number;
   name: string;
