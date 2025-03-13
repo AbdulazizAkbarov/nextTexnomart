@@ -20,7 +20,7 @@ function TopCatigory() {
       });
   }, []);
   return (
-    <div className="flex items-center my-4 justify-between px-10">
+    <div className="flex items-center my-4 justify-between px-10 mt-5">
       {catigory.map((item, id) => (
         <Link href={`/catigoria/${item.slug}`} key={id}>{item.title}</Link>
       ))}
